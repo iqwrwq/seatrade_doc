@@ -3,6 +3,11 @@
 
 > Das SeaTrade Projekt ist ein Schulprojekt aus dem Java Kurs und ist die Übung zur Arbeit mit einem Server.
 
+## Downloads
+
+<a href="zips/ShipApp.zip" download>ShipApp_V_1.0</a>\
+<a href="zips/CompanyApp.zip" download>CompanyApp_V_1.0</a>
+
 ## Packet Informationen
 >Das Packet beinhaltet eine ShipApp und eine CompanyApp. Die Konfigurationen der Applikationen kann unter `config/config.properties` vorgenommen werden. Die Applikationen funktionieren nur im Zusammenhang mit der SeaTradeApp.
 
@@ -23,7 +28,7 @@
 ```
 
 ## Installation
-> Um die Apps zu installieren, müssen zwei Zip Dateien heruntergeladen und entpackt werden. Die Struktur der Applikationen sollte nicht verändert werden.
+> Um die Apps zu installieren, müssen zwei Zip Dateien <a href="/#/?id=downloads">heruntergeladen</a> und entpackt werden. Die Struktur der Applikationen sollte nicht verändert werden.
 
 ### Nutzen
 >Die Applikationen werden über das Terminal gestartet. Navigieren Sie über die Console in das Verzeichnis der Applikation, die Sie starten möchten.
@@ -71,3 +76,4 @@
 | load **SHIP_ID**                | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das nächste Cargo am Hafen zu beladen|
 | load **SHIP_ID** **CARGO_ID**   | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das Cargo mit der ID <CARGO_ID> zu laden|
 | unload **SHIP_ID**              | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> sein geladenes Cargo zu entladen|
+| exit              | User -> ShipServer | Beendet alle ShipApp-Verbindungen und beendet den ShipServer, sowie die Verbindung zum SeaTradeServer  |
