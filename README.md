@@ -3,10 +3,10 @@
 
 > Das SeaTrade Projekt ist ein Schulprojekt aus dem Java Kurs und ist die Übung zur Arbeit mit einem Server.
 
-##Packet Informationen
+## Packet Informationen
 >Das Packet beinhaltet eine ShipApp und eine CompanyApp. Die Konfigurationen der Applikationen kann unter `config/config.properties` vorgenommen werden. Die Applikationen funktionieren nur im Zusammenhang mit der SeaTradeApp.
 
-###ShipApp Ordnerstruktur
+### ShipApp Ordnerstruktur
 ```
 ├── ShipApp
 │   └── config
@@ -14,7 +14,7 @@
 └── ShipApp.jar
 ```
 
-###CompanyApp Ordnerstruktur
+### CompanyApp Ordnerstruktur
 ```
 ├── CompanyApp
 │   └── config
@@ -22,18 +22,18 @@
 └── CompanyApp.jar
 ```
 
-##Installation
+## Installation
 > Um die Apps zu installieren, müssen zwei Zip Dateien heruntergeladen und entpackt werden. Die Struktur der Applikationen sollte nicht verändert werden.
 
-###Nutzen
+### Nutzen
 >Die Applikationen werden über das Terminal gestartet. Navigieren Sie über die Console in das Verzeichnis der Applikation, die Sie starten möchten.
 
 >Befehl zum Starten Applikationen\
 `.../CompanyApp/> java -jar CompanyApp.jar`\
 `.../ShipApp/> java -jar ShipApp.jar`
 
-###Konfiguration der Applikationen
-####CompanyApp Konfiguration
+### Konfiguration der Applikationen
+#### CompanyApp Konfiguration
 >Anpassungen werden in der Properties Datei under `CompanyApp/config/config.properties` vorgenommen. Hier können verschiedene Properties gesetzt werden um die Applikation anzupassen.
 
 | Property         | Wert     | Funktion |
@@ -46,7 +46,7 @@
 | ReconnectionTimeGap      | Integer  | Die Zeit in ms mit welcher die Applikation nach einer misslungenen Verbindung warten soll, bis eine neue Verbindung aufgebaut wird       |
 | ConnectionAttempts | Integer      | Die Anzahl an Wieder-Verbindungsversuchen nach Misslungener Verbindung        |
 
-####ShipApp Konfiguration
+#### ShipApp Konfiguration
 >Auch in der ShipApp werden die Anpassungen unter `ShipApp/config/config.properties` gemacht
 
 | Property         | Wert     | Funktion |
@@ -58,3 +58,16 @@
 | shipServerPort | Integer      | Der Port über welcher der ShipServer mit den ShipApp-Verbindungen Kommunizieren kann        |
 | ReconnectionTimeGap      | Integer  | Die Zeit in ms mit welcher die Applikation nach einer misslungenen Verbindung warten soll, bis eine neue Verbindung aufgebaut wird       |
 | ConnectionAttempts | Integer      | Die Anzahl an Wieder-Verbindungsversuchen nach Misslungener Verbindung        |
+
+#### Kommandos
+>Zum Benutzen der Applikation werden Befehle über die Console eingegeben. Alle Befehle richtigen sich hier an die CompanyApp. Befehle die sich im Kontext an die ShipApp richten werden trotzdem an die CompanyApp gerichtet. Befehlsparameter werden mit einem Leerzeichen getrennt.
+
+#### Liste an Befehlen
+| Befehl                          | Kommunikation           | Funktion   |
+|---------------------------------|-------------------------|------------|
+| move **SHIP_ID** **ZIEL_HAFEN** | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> sich zum <ZIEL_HAFEN> zu bewegen.|
+| ships                           | ShipServer -> User          | Gibt eine Übersicht aller Schiffe aus|
+| cargo                           | ShipServer -> User          | Gibt eine Übersicht über alle Cargos aus. Sollte ein Cargo neu für die Applikation sein, wird dieses im Speicher der Applikation notiert bzw. synchronisiert|
+| load **SHIP_ID**                | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das nächste Cargo am Hafen zu beladen|
+| load **SHIP_ID** **CARGO_ID**   | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das Cargo mit der ID <CARGO_ID> zu laden|
+| unload **SHIP_ID**              | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> sein geladenes Cargo zu entladen|
