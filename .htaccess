@@ -1,0 +1,4 @@
+RewriteEngine ON
+RewriteCond %{HTTPS} !on
+RewriteCond %{HTTP_HOST} ^seatrade\.eique\.de [NC]
+RewriteRule .? https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
