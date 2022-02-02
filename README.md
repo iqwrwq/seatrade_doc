@@ -1,12 +1,18 @@
 # SeaTrade Projekt
-## Arthur Schimpf E3FI3
+<i class="fas fa-male"></i> Arthur Schimpf E3FI3
 
 > Das SeaTrade Projekt ist ein Schulprojekt aus dem Java Kurs und ist die Übung zur Arbeit mit einem Server.
 
 ## Downloads
 
-<a href="zips/ShipApp.zip" download>ShipApp_V_1.0</a>\
-<a href="zips/CompanyApp.zip" download>CompanyApp_V_1.0</a>
+<i class="fas fa-file-archive"></i> <a href="zips/ShipApp.zip" download> ShipApp_V_1.0</a>\
+<i class="fas fa-file-archive"></i> <a href="zips/CompanyApp.zip" download> CompanyApp_V_1.0</a>
+
+## GIT
+> Die Repositories für beide Projekte sind unter GitHub öffentlich einsehbar.
+
+<i class="fab fa-github"></i> <a href="https://github.com/iqwrwq/CompanyApp"> CompanyApp Repository</a>\
+<i class="fab fa-github"></i> <a href="https://github.com/iqwrwq/ShipApp">ShipApp Repository</a>
 
 ## Packet Informationen
 >Das Packet beinhaltet eine ShipApp und eine CompanyApp. Die Konfigurationen der Applikationen kann unter `config/config.properties` vorgenommen werden. Die Applikationen funktionieren nur im Zusammenhang mit der SeaTradeApp.
@@ -28,7 +34,9 @@
 ```
 
 ## Installation
-> Um die Apps zu installieren, müssen zwei Zip Dateien <a href="/#/?id=downloads">heruntergeladen</a> und entpackt werden. Die Struktur der Applikationen sollte nicht verändert werden.
+> Um die Apps zu installieren, müssen zwei Zip Dateien <a href="/#/?id=downloads">heruntergeladen</a> und entpackt werden.
+
+!> Die Struktur der Applikationen sollte nicht verändert werden.
 
 ### Nutzen
 >Die Applikationen werden über das Terminal gestartet. Navigieren Sie über die Console in das Verzeichnis der Applikation, die Sie starten möchten.
@@ -71,7 +79,7 @@
 | Befehl                          | Kommunikation           | Funktion   |
 |---------------------------------|-------------------------|------------|
 | move **SHIP_ID** **ZIEL_HAFEN** | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> sich zum <ZIEL_HAFEN> zu bewegen.|
-| ships                           | ShipServer -> User          | Gibt eine Übersicht aller Schiffe aus|
+| ships                           | ShipServer -> User          | Gibt eine Übersicht aller Schiffe aus, TIPP: Verwenden Sie diesen Befehl um die SHIP_ID einer ShipApp herauszufinden|
 | cargo                           | ShipServer -> User          | Gibt eine Übersicht über alle Cargos aus. Sollte ein Cargo neu für die Applikation sein, wird dieses im Speicher der Applikation notiert bzw. synchronisiert|
 | load **SHIP_ID**                | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das nächste Cargo am Hafen zu beladen|
 | load **SHIP_ID** **CARGO_ID**   | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das Cargo mit der ID <CARGO_ID> zu laden|
