@@ -28,8 +28,10 @@
 ### CompanyApp Ordnerstruktur
 ```
 ├── CompanyApp
-│   └── config
-│       └── config.properties
+│   │ └── config
+│   │       └── config.properties
+│   └──── logs
+│           └── log.txt
 └── CompanyApp.jar
 ```
 
@@ -58,6 +60,10 @@
 | shipServerPort | Integer      | Der Port über welcher der ShipServer mit den ShipApp-Verbindungen Kommunizieren kann        |
 | ReconnectionTimeGap      | Integer  | Die Zeit in ms mit welcher die Applikation nach einer misslungenen Verbindung warten soll, bis eine neue Verbindung aufgebaut wird       |
 | ConnectionAttempts | Integer      | Die Anzahl an Wieder-Verbindungsversuchen nach Misslungener Verbindung        |
+| harbours | String[]      | Mit Komma getrennte Aufzählung an Häfen in der SeaTradeApp        |
+| initialAutoSync | Boolean      | Automatische Synchronisation beim starten der Applikation. Derzeit werden alle Cargos aus der SeaTradeApp synchronisiert        |
+| muteSync | Boolean      | Da der Sync Befehl meist sehr unübersichtlich wird, hat man hier die Möglichkeit den Befehl im Hintergrund ohne Benachrichtigung laufen zu lassen.        |
+| massMove | Boolean      | EXPERIMENTAL! Aktiviert den `massmove` Befehl um alle Schiffe, die sich auf Häfen befinden, welche Cargos auf sich lagern zu beladen und zum Zielhafen zu bewegen. Derzeit wird aber von der Benutzung abgeraten        |
 
 #### ShipApp Konfiguration
 >Auch in der ShipApp werden die Anpassungen unter `ShipApp/config/config.properties` gemacht
@@ -85,3 +91,5 @@
 | load **SHIP_ID** **CARGO_ID**   | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das Cargo mit der ID <CARGO_ID> zu laden|
 | unload **SHIP_ID**              | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> sein geladenes Cargo zu entladen|
 | exit              | User -> ShipServer | Beendet alle ShipApp-Verbindungen und beendet den ShipServer, sowie die Verbindung zum SeaTradeServer  |
+| massmove              | User -> ShipServer | Beladen und Bewegen aller möglichen Schiffe (Muss aktiviert werden)  |
+| massunload              | User -> ShipServer | Abladen aller möglichen Schiffe (Muss aktiviert werden)  |
