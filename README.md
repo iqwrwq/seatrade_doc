@@ -6,7 +6,7 @@
 ## Downloads
 
 <i class="fas fa-file-archive"></i> <a href="zips/ShipApp_v1.0.zip" download> ShipApp_V_1.0</a>\
-<i class="fas fa-file-archive"></i> <a href="zips/CompanyApp_v1.0.zip" download> CompanyApp_V_1.0</a>
+<i class="fas fa-file-archive"></i> <a href="zips/CompanyApp_v1.0.2.zip" download> CompanyApp_V_1.0.2</a>
 
 ## GIT
 > Die Repositories für beide Projekte sind unter GitHub öffentlich einsehbar.
