@@ -1,4 +1,4 @@
-?> Version 1.1 wurde released! ✨
+?> Jetzt mit GitHub Releases! 🚀
 
 # SeaTrade Projekt
 
@@ -12,26 +12,22 @@
 
 | Version                                                                                                 | tags                                | Download                                                                                                                                |
 |:---                                                                                                     |:---:                                |:---:                                                                                                                                    |
-|<a href="https://github.com/iqwrwq/company_app/releases/tag/v1.1.0" target="_blank">CompanyApp_v1.1.0</a>| <small class="badge">stable</small> |  <a style="color: Dodgerblue;" href="zips/CompanyApp_v1.1.zip" download><i class="fa-solid fa-download fa-xl"></i></a>| 
+|<a href="https://github.com/iqwrwq/company_app/releases/tag/v1.1.0" target="_blank">CompanyApp_v1.1.0</a>| <small class="badge green">stable</small> <small class="badge purple">latest</small> |  <a class="badge-btn" style="color: #fff;" href="zips/CompanyApp_v1.1.zip" download><i class="fa-solid fa-download fa-xl"></i></a>| 
 
 ### ShipApp Releases
 
 | Version                                                                                            | tags                                | Download                                                                                                                            |
 |:---                                                                                                |:---:                                |:---:                                                                                                                                |
-|<a href="https://github.com/iqwrwq/ship_app/releases/tag/v1.0.0" target="_blank"> ShipApp_v1.0.0</a>| <small class="badge">stable</small> | <a style="color: Dodgerblue;" href="zips/ShipApp_v1.0.zip" download><i class="fa-solid fa-download fa-xl"></i></a>|
+|<a href="https://github.com/iqwrwq/ship_app/releases/tag/v1.0.0" target="_blank"> ShipApp_v1.0.0</a>| <small class="badge green">stable</small> <small class="badge purple">latest</small> | <a class="badge-btn" style="color: #fff;" href="zips/ShipApp_v1.0.zip" download><i class="fa-solid fa-download fa-xl"></i></a>|
 
 ## GIT
 
-> Die Repositories für beide Projekte sind unter GitHub öffentlich einsehbar.
+> Die Repositories für beide Projekte sind unter GitHub öffentlich einsehbar. Das main repository ist die Zusammensetzung beider Apps, sowie dieser Dokumentation
 
-<i class="fab fa-github"></i> <a href="https://github.com/iqwrwq/seatrade_app"> SeaTradeApp Repository [main]</a>\
+<i class="fab fa-github"></i> <a href="https://github.com/iqwrwq/seatrade_app"> SeaTradeApp Repository [main]</a>
+
 <i class="fab fa-github"></i> <a href="https://github.com/iqwrwq/company_app"> CompanyApp Repository [sub]</a>\
 <i class="fab fa-github"></i> <a href="https://github.com/iqwrwq/ship_app">ShipApp Repository [sub]</a>
-
-## Changelog
-
-> Ab der Version 1.1 der Company App wird auch ein Changelog geführt, das auf Neuerungen und Änderungen verweist. Zu finden ist dieses hier: <a href="/#/changelog.md">Changelog</a>.
-> Oder in den Dateien der jeweiligen Repos auf GitHub.
 
 ## Packet Informationen
 
@@ -89,7 +85,7 @@
 | initialAutoSync                               | Boolean  | Automatische Synchronisation beim starten der Applikation. Derzeit werden alle Cargos aus der SeaTradeApp synchronisiert                                                                                         |
 | muteSync                                      | Boolean  | Da der Sync Befehl meist sehr unübersichtlich wird, hat man hier die Möglichkeit den Befehl im Hintergrund ohne Benachrichtigung laufen zu lassen.                                                               |
 | massMove                                      | Boolean  | EXPERIMENTAL! Aktiviert den `massmove` Befehl um alle Schiffe, die sich auf Häfen befinden, welche Cargos auf sich lagern zu beladen und zum Zielhafen zu bewegen. Derzeit wird aber von der Benutzung abgeraten |
-| <small class="badge">new</small> fullAutoMode | Boolean  | EXPERIMENTAL! Aktivieren um die Application sich selbst zu überlassen. Sie wird Schiff-Verbidnungen verwalten und bewegen um Profit zu generieren                                                                |
+| fullAutoMode                                  | Boolean  | EXPERIMENTAL! Aktivieren um die Application sich selbst zu überlassen. Sie wird Schiff-Verbidnungen verwalten und bewegen um Profit zu generieren                                                                |
 
 #### ShipApp Konfiguration
 
@@ -110,19 +106,14 @@
 > Zum Benutzen der Applikation werden Befehle über die Console eingegeben. Alle Befehle richtigen sich hier an die CompanyApp. Befehle die sich im Kontext an die ShipApp richten werden trotzdem an die CompanyApp gerichtet. Befehlsparameter werden mit einem Leerzeichen getrennt.
 
 #### Liste an Befehlen
-
 | Befehl                          | Kommunikation               | Funktion                                                                                                                                                     |
 |---------------------------------|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| move **SHIP_ID** **
-ZIEL_HAFEN** | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> sich zum <ZIEL_HAFEN> zu bewegen.                                                                                   |
+| move **SHIP_ID** **ZIEL_HAFEN** | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> sich zum <ZIEL_HAFEN> zu bewegen.                                                                                   |
 | ships                           | ShipServer -> User          | Gibt eine Übersicht aller Schiffe aus, TIPP: Verwenden Sie diesen Befehl um die SHIP_ID einer ShipApp herauszufinden                                         |
 | cargo                           | ShipServer -> User          | Gibt eine Übersicht über alle Cargos aus. Sollte ein Cargo neu für die Applikation sein, wird dieses im Speicher der Applikation notiert bzw. synchronisiert |
-| load **
-SHIP_ID**                | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das nächste Cargo am Hafen zu beladen                                                                               |
-| load **SHIP_ID** **
-CARGO_ID**   | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das Cargo mit der ID <CARGO_ID> zu laden                                                                            |
-| unload **
-SHIP_ID**              | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> sein geladenes Cargo zu entladen                                                                                    |
+| load **SHIP_ID**                | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das nächste Cargo am Hafen zu beladen                                                                               |
+| load **SHIP_ID** **CARGO_ID**   | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> das Cargo mit der ID <CARGO_ID> zu laden                                                                            |
+| unload **SHIP_ID**              | ShipServer -> Ship<SHIP_ID> | Befiehlt dem Schiff mit der ID <SHIP_ID> sein geladenes Cargo zu entladen                                                                                    |
 | exit                            | User -> ShipServer          | Beendet alle ShipApp-Verbindungen und beendet den ShipServer, sowie die Verbindung zum SeaTradeServer                                                        |
 | massmove                        | User -> ShipServer          | Beladen und Bewegen aller möglichen Schiffe (Muss aktiviert werden)                                                                                          |
 | massunload                      | User -> ShipServer          | Abladen aller möglichen Schiffe (Muss aktiviert werden)                                                                                                      |

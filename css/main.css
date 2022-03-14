@@ -1,6 +1,37 @@
 .badge{
     color: #fff;
-    background-color: #5f93d3;
+    background-color: #3472ad;
     padding: .3rem 1rem;
     border-radius: 5px;
 }
+
+.red{
+    background-color: #FF8B8B;
+}
+
+.green{
+    background-color: #4daf42;
+}
+
+.yellow{
+    background-color: #F5FFA2;
+}
+
+
+.purple{
+    background-color: #ee6fe1;
+}
+
+.badge-btn{
+    color: #fff;
+    background-color: #3472ad;
+    padding: .8rem 1rem;
+    border-radius: 5px;
+}
+
+.badge-btn:hover{
+    background-color: #408ad0;
+    padding: .9rem 1.1rem;
+    transition: all .1s ease-out 100ms
+}
+
